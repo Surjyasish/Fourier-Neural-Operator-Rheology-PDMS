@@ -9,7 +9,7 @@ across the composition-frequency plane.
 - **Learns from sparse sweeps.** Trains on a handful of frequency
   sweeps at discrete crosslinker ratios and interpolates continuously
   in both ratio and ω.
-- **Respects the physics.** A soft loss enforces the terminal-region
+- **Incorporates the physics.** A soft loss enforces the terminal-region
   scalings G' ~ ω² and G'' ~ ω, plus Kramers-Kronig-motivated
   monotonicity of G'(ω).
 - **Focuses spectral capacity.** Gated spectral convolutions apply a
@@ -32,12 +32,12 @@ space and projected back to (log₁₀ G', log₁₀ G''). All quantities are
 learned in log space to span the multi-decade dynamic range of the
 moduli. Modes are truncated to match the frequency-grid Nyquist bound.
 
-### Data
+### Data Used
 
-`Rheology_Data_PDMS_Sylgard.xlsx` holds one sheet per Sylgard 184
-base:crosslinker ratio, with columns `Omega` (rad/s), `Gp` (Pa),
-`Gpp` (Pa). Measurements are SAOS frequency sweeps in the linear
-viscoelastic regime.
+Oscillatory rheology sweeps of different base:crosslinker ratios 
+of PDMS, Sylgard 184, i.e., variations of storage shear modulus `Gp` (Pa)
+ and loss shear modulus `Gpp` (Pa) with `Omega` (rad/s). 
+Measurements are in the linear viscoelastic regime.
 
 ### Requirements
 
